@@ -173,8 +173,12 @@ nownum = theresult[count].split("|")[0];
       $("#now, #max").html(nownum);
       $("#nowstatue, #beststatue").find("td").css("background", "none");
       for (var i = 1;i<theresult[count].split("|").length;i++){
-        $("#" + theresult[count].split("|")[i]).css("background", "#f00");
-        $("#" + theresult[count].split("|")[i] +　'max').css("background", "#f00");
+          thex = theresult[count].split("|")[i].split("-")[0];
+        they = theresult[count].split("|")[i].split("-")[1];
+        thex = thex % n1;
+        they = they % n2;
+        $("#" +thex + '-' + they).css("background", "#f00");
+        $("#" +thex + '-' + they +　'max').css("background", "#f00");
       }
       }
       else{
@@ -183,13 +187,23 @@ nownum = theresult[count].split("|")[0];
         $("#max").html(nownum);
       $("#beststatue").find("td").css("background", "none");
       for (var i = 1;i<theresult[count].split("|").length;i++){
-        $("#" + theresult[count].split("|")[i] + 'max').css("background", "#f00");
+          thex = theresult[count].split("|")[i].split("-")[0];
+        they = theresult[count].split("|")[i].split("-")[1];
+        thex = thex % n1;
+        they = they % n2;
+        $("#" +thex + '-' + they).css("background", "#f00");
+        $("#" +thex + '-' + they +　'max').css("background", "#f00");
       }
       }
       $("#now").html(nownum);
       $("#nowstatue").find("td").css("background", "none");
       for (var i = 1;i<theresult[count].split("|").length;i++){
-        $("#" + theresult[count].split("|")[i]).css("background", "#f00");
+          thex = theresult[count].split("|")[i].split("-")[0];
+        they = theresult[count].split("|")[i].split("-")[1];
+        thex = thex % n1;
+        they = they % n2;
+        $("#" +thex + '-' + they).css("background", "#f00");
+        $("#" +thex + '-' + they).css("background", "#f00");
       }
     }
     }
@@ -204,7 +218,12 @@ $("#back").click(function(){
       $("#now").html(nownum);
       $("#nowstatue").find("td").css("background", "none");
       for (var i = 1;i<theresult[count].split("|").length;i++){
-        $("#" + theresult[count].split("|")[i]).css("background", "#f00");
+          thex = theresult[count].split("|")[i].split("-")[0];
+        they = theresult[count].split("|")[i].split("-")[1];
+        thex = thex % n1;
+        they = they % n2;
+        $("#" +thex + '-' + they).css("background", "#f00");
+        $("#" +thex + '-' + they).css("background", "#f00");
       }
     }
 })
